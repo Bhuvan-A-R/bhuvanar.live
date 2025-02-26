@@ -1,4 +1,4 @@
-# Bhuvan S A - Portfolio Website
+# Bhuvan A R - Portfolio Website
 
 This repository contains the code for my personal portfolio website built using Next.js. The website showcases my skills, experience, and projects.
 
@@ -38,13 +38,13 @@ This repository contains the code for my personal portfolio website built using 
 1. Clone the repository:
 
    ```
-   git clone https://github.com/BhuvanSA/bhuvansa.com.git
+   git clone https://github.com/Bhuvan-A-R/bhuvanar.live.git
    ```
 
 2. Navigate to the project directory:
 
    ```
-   cd bhuvansa.com/
+   cd bhuvanar.live/
    ```
 
 3. Install the dependencies:
