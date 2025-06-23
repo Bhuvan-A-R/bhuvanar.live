@@ -5,41 +5,28 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
-import { db } from "../firebaseConfig";
-import { collection, addDoc, Timestamp } from "firebase/firestore";
+import { sendMail } from "@/lib/mail";
 
 const Form = () => {
   const [status, setStatus] = useState(1);
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [success, setSuccess] = useState(false);
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  async function handleSubmit(e) {
-    e.preventDefault();
+  async function handleSubmit(formData) {
     setStatus(2);
     try {
-      await addDoc(collection(db, "submissions"), {
-        ...form,
-        created: Timestamp.now(),
-      });
+      await sendMail(formData);
       setStatus(3);
-      setSuccess(true);
-      setForm({ name: "", email: "", message: "" });
     } catch (error) {
       setStatus(4);
-      console.error(error); // Add this line
-      alert("Error submitting form");
     }
   }
   return (
     <>
-      {(status <= 2 || success) && (
+      {status <= 2 && (
         <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-y-4"
+          action={async (formData) => {
+            await setStatus(2);
+            handleSubmit(formData);
+          }}
         >
           {/* input */}
           <div className="relative flex items-center">
@@ -48,8 +35,6 @@ const Form = () => {
               id="name"
               name="name"
               placeholder="Name"
-              value={form.name}
-              onChange={handleChange}
               required
             />
             <User size={20} className="absolute right-6" />
@@ -61,21 +46,13 @@ const Form = () => {
               id="email"
               name="email"
               placeholder="Email"
-              value={form.email}
-              onChange={handleChange}
               required
             />
             <MailIcon size={20} className="absolute right-6" />
           </div>
           {/* textarea */}
           <div className="relative flex items-center">
-            <Textarea
-              placeholder="Type Your Message"
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              required
-            />
+            <Textarea placeholder="Type Your Message" name="message" required />
             <MessageSquare size={20} className="absolute right-6 top-4" />
           </div>
           {status === 1 && (
@@ -108,7 +85,6 @@ const Form = () => {
           Failed to send the message. Please try again.
         </p>
       )}
-      {success && <p className="text-green-500">Submitted!</p>}
     </>
   );
 };
