@@ -13,12 +13,12 @@ export const IconsLinks = [
         weblink: SocialMediaProfiles.linkedin,
         iconlogo: <SiLinkedin />,
     },
-    {
-        weblink: SocialMediaProfiles.leetcode,
-        iconlogo: <SiLeetcode />,
-    },
-    {
-        weblink: SocialMediaProfiles.x,
-        iconlogo: <SiX />,
-    },
+    // {
+    //     weblink: SocialMediaProfiles.leetcode,
+    //     iconlogo: <SiLeetcode />,
+    // },
+    // {
+    //     weblink: SocialMediaProfiles.x,
+    //     iconlogo: <SiX />,
+    // },
 ];
