@@ -4,7 +4,7 @@ export const Education = [
         course: "B.E in AI & ML",
         time: "Sep 2023 ‑ Jul 2027",
         location: "Bengaluru, India",
-        grade: "9.15 CGPA",
+        grade: "9.06 CGPA",
     },
     {
         institution: "Deeksha Center of Learning",

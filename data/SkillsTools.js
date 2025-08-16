@@ -26,7 +26,7 @@ export const SkillsTools = {
         "MySQL",
         // "SQLite3",
         // "PostgreSQL",
-        // "MongoDB",
+        "MongoDB",
         "Machine Learning",
         // "Deep Learning",
         // "Gen AI",

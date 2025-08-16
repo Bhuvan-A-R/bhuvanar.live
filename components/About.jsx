@@ -37,12 +37,12 @@ const About = () => {
                 >
                   Personal Info
                 </TabsTrigger>
-                {/* <TabsTrigger
+                <TabsTrigger
                   className="w-full px-2 py-3 text-base sm:text-lg xl:w-[150px]"
                   value="Experience"
                 >
                   Experience
-                </TabsTrigger> */}
+                </TabsTrigger>
                 <TabsTrigger
                   className="w-full px-2 py-3 text-base sm:text-lg xl:w-[150px]"
                   value="Education"
@@ -90,7 +90,7 @@ const About = () => {
                 </TabsContent>
 
                 {/* Experience Content */}
-                {/* <TabsContent value="Experience">
+                <TabsContent value="Experience">
                   <h3 className="mb-8 text-center text-3xl font-bold xl:text-left">
                     My Awesome Journey
                   </h3>
@@ -122,7 +122,7 @@ const About = () => {
                       })}
                     </div>
                   </div>
-                </TabsContent> */}
+                </TabsContent>
 
                 {/* Education Content */}
                 <TabsContent value="Education">
