@@ -52,12 +52,12 @@ const Hero = () => {
           {/* image */}
           <div className="relative hidden xl:flex">
             {/* internship badge */}
-            <Badge
+            {/* <Badge
               containerStyles="absolute top-[24%] -left-[8.5rem]"
               icon={<RiBriefcase4Fill />}
               endCountNum={1}
               badgeText="Internships Completed"
-            />
+            /> */}
             {/* finsihed projects badge */}
             <Badge
               containerStyles="absolute top-[0%] -right-10"
