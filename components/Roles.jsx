@@ -25,6 +25,9 @@ const Roles = () => {
       ]}
     >
       <CarouselContent>
+        <CarouselItem>Unstop Campus Ambassador</CarouselItem>
+        <CarouselItem>IEEE MEMBER</CarouselItem>
+        <CarouselItem>ICC MEMBER</CarouselItem>
         <CarouselItem>FullStack Developer</CarouselItem>
         <CarouselItem>GCC Core Member</CarouselItem>
         {/* <CarouselItem>ML Engineer</CarouselItem> */}
