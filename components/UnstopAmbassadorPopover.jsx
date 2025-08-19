@@ -110,7 +110,7 @@ const UnstopAmbassadorPopover = ({ show, onClose }) => {
           ✖
         </button>
         <img
-          src="/logo.svg"
+          src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/svg/unstop-logo.svg"
           alt="Unstop Logo"
           style={{
             width: 64,
