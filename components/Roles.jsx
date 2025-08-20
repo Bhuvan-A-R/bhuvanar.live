@@ -29,10 +29,10 @@ const Roles = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <UnstopAmbassadorPopover
+      {/* <UnstopAmbassadorPopover
         show={showPopover}
         onClose={handleClosePopover}
-      />
+      /> */}
       <Carousel
         opts={{
           align: "start",
